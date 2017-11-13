@@ -31,7 +31,17 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    // proxyTable: {},
+    proxyTable: {
+      '/mapi': {
+        target: 'http://localhost:8899/mapi',
+        changeOrigin: true,
+        pathRewrite: {
+          // 该方法是指将默认指向的那个/mapi替换为‘’（注：不是路径上的原mapi）
+         '^/mapi': ''
+        }
+      }
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
