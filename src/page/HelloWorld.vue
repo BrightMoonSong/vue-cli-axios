@@ -57,15 +57,24 @@
         <a href="javscript:void(0)" class="kiko-btn cancel" @click="confirmVisible = false">取消</a>
       </div>
     </kiko-confirm>
+    <div class="echarts-div">
+      <visitor-pie :pieData="pieData"></visitor-pie>
+    </div>
+    <div class="echarts-div">
+      <tendency :sevenDate='sevenDate' :sevenDay='sevenDay'></tendency>
+    </div>
   </div>
 </div>
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
 // import info from '../common/notification/notificationInit';
 import notif from '../common/notif';
 // import relnotf from '../common/Notification';
+import visitorPie from '../common/echarts/visitorPie';
+import tendency from '../common/echarts/tendency';
+
 export default {
   name: 'HelloWorld',
   data() {
@@ -81,7 +90,20 @@ export default {
       loginForm: {
         username: '17301088769',
         password: '123456'
-      }
+      },
+      pieData: {
+        beijing: 50,
+        shanghai: 59,
+        shenzhen: 54,
+        hangzhou: 51,
+        qita: 75
+      },
+      sevenDate: [
+        [3, 5, 6, 9, 12, 78, 12],
+        [13, 5, 2, 68, 9, 72, 12],
+        [3, 15, 9, 38, 9, 32, 12]
+      ],
+      sevenDay: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
     };
   },
   created() {
@@ -91,18 +113,21 @@ export default {
     //   desc: 'Here is the notification description. Here is the notification description. '
     // });
     // info.success('Here is the notification description.');
-    axios.post('/mapi/shiro/login?phone=' + this.loginForm.username + '&password=' + this.loginForm.password)
-      .then(function(response) {
-        console.log('response');
-        console.log(response);
-      })
-      .catch(function(error) {
-        console.log('error');
-        console.log(error);
-      });
+
+    // axios.post('/mapi/shiro/login?phone=' + this.loginForm.username + '&password=' + this.loginForm.password)
+    //   .then(function(response) {
+    //     console.log('response');
+    //     console.log(response);
+    //   })
+    //   .catch(function(error) {
+    //     console.log('error');
+    //     console.log(error);
+    //   });
   },
   components: {
-    notif
+    notif,
+    visitorPie,
+    tendency
   },
   methods: {
     loadingFullFun() {
@@ -180,5 +205,9 @@ li {
 
 a {
     color: #42b983;
+}
+.echarts-div {
+    width: 100%;
+    border: 2px solid #eee;
 }
 </style>
