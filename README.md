@@ -33,3 +33,5 @@ https://segmentfault.com/a/1190000010559711
 5.页面写在page文件夹下
 
 6.组件--common/--fonts字体图标文件--scss公用scss文件
+
+7.vuex 状态管理（没有写在这里）
