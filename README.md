@@ -35,3 +35,5 @@ https://segmentfault.com/a/1190000010559711
 6.组件--common/--fonts字体图标文件--scss公用scss文件
 
 7.vuex 状态管理（没有写在这里）
+
+8.echarts --common/--echarts--用法在yongfa.txt
