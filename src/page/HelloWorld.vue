@@ -57,6 +57,11 @@
         <a href="javscript:void(0)" class="kiko-btn cancel" @click="confirmVisible = false">取消</a>
       </div>
     </kiko-confirm>
+    <div class="dakuang">
+      <div class="kuang">
+
+      </div>
+    </div>
     <div class="echarts-div">
       <visitor-pie :pieData="pieData"></visitor-pie>
     </div>
@@ -209,5 +214,30 @@ a {
 .echarts-div {
     width: 100%;
     border: 2px solid #eee;
+}
+.dakuang {
+    width: 100%;
+    height: 130px;
+    padding: 10px;
+    .kuang {
+        margin: 0 auto;
+        border: 4px solid #e7f607bd;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        animation: mymove 2s infinite;
+    }
+    @keyframes mymove {
+        from {
+            width: 100px;
+            height: 100px;
+            margin-top: 0px;
+        }
+        to {
+            width: 1px;
+            height: 1px;
+            margin-top: 49px;
+        }
+    }
 }
 </style>
