@@ -20,7 +20,7 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-1.http请求用axios
+1.http请求用 axios
 
 2.弹窗用kiko-->见-https://github.com/rascalHao/kiko
 https://segmentfault.com/a/1190000010559711
