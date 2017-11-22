@@ -37,3 +37,13 @@ https://segmentfault.com/a/1190000010559711
 7.vuex 状态管理（没有写在这里）
 
 8.echarts --common/--echarts--用法在yongfa.txt
+
+9.百度地图--@page/map/--用法：在main.js
+```
+import BaiduMap from 'vue-baidu-map';
+Vue.use(BaiduMap, {
+  // ak 是在百度地图开发者平台申请的密钥 详见 http://lbsyun.baidu.com/apiconsole/key */
+  ak: 'L0EcRkZ9YBaGTOH5X1mpQqC7SVvDhmKL'
+});
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=L0EcRkZ9YBaGTOH5X1mpQqC7SVvDhmKL"></script>
+```
